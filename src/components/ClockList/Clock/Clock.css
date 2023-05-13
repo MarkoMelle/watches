@@ -1,0 +1,67 @@
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  transform-origin: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.second-hand {
+  height: 1px;
+  background-color: red;
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.clock-name {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.btn-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  z-index: 20;
+  border: none;
+}
